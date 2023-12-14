@@ -11,6 +11,9 @@ const App = {
         inputChangeHandler (event) {
             this.inputValue = event.target.value;
         },
+        toUpperCase (item) {
+            return item.toUpperCase();
+        },
         addNewNote () {
             if (this.inputValue !== '') {
                 this.notes.push(this.inputValue);
@@ -21,6 +24,12 @@ const App = {
             this.notes.splice(index, 1);
 
         }
+    },
+    computed: {
+        doubleCountComputed() {
+            console.log('doubleCountComputed');
+            return (this.notes.length * 2);
+        }        
     }
 }
 
