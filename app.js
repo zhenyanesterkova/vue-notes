@@ -7,10 +7,7 @@ const App = {
             notes: ['Заметка 1', 'Замека 2']
         }
     },
-    methods: {
-        inputChangeHandler (event) {
-            this.inputValue = event.target.value;
-        },
+    methods:{
         toUpperCase (item) {
             return item.toUpperCase();
         },
@@ -27,7 +24,6 @@ const App = {
     },
     computed: {
         doubleCountComputed() {
-            console.log('doubleCountComputed');
             return (this.notes.length * 2);
         }        
     },

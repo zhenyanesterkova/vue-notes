@@ -12,8 +12,7 @@
             <h1>{{title}}</h1>
             <div class="form-control">
                 <input 
-                    type="text" :placeholder="placeholderString" :value="inputValue"
-                    @input="inputChangeHandler"
+                    type="text" :placeholder="placeholderString" v-model="inputValue"
                     @keypress.enter="addNewNote"
                 >
             </div>
