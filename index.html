@@ -9,7 +9,13 @@
 <body>
     <div class="container" id="app">
         <div class="card ">
-            <h1>{{title}}</h1>
+            <h1 :style="{
+                color: inputValue.length < 5 ? 'darkred' : 'blue',
+                fontSize: inputValue.length < 6 ? '2rem' : '1.5rem'
+                }" 
+            >
+                    {{title}}
+            </h1>
             <div class="form-control">
                 <input 
                     type="text" :placeholder="placeholderString" v-model="inputValue"
